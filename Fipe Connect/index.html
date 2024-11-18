@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Fipe Connect</title>
 </head>
 <body>
     <div class="container">
-        <h1>Consulta de Carros - Fipe</h1>
-        <form id="carForm">
-            <label for="marca">Marca:</label>
-            <select id="marca" required>
-                <option value="">Selecione uma marca</option>
-        </form>
-        <div id="resultados"></div>
+        <div class="card">
+            <div class="card-header">Veículos</div>
+            <div class="card-body">
+                <button class="button" onclick="loadMarcas('carros')">Carros</button>
+                <button class="button" onclick="loadMarcas('motos')">Motos</button>
+                <button class="button" onclick="loadMarcas('caminhoes')">Caminhões</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Modelos/Marca</div>
+            <div class="card-body scrollable" id="modelos">
+                <p>Selecione uma marca primeiro.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Data de Fabricação</div>
+            <div class="card-body scrollable" id="anos">
+                <p>Selecione um modelo primeiro.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Valores</div>
+            <div class="card-body" id="detalhes">
+                <p>Selecione o ano do veículo.</p>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
